@@ -327,7 +327,16 @@
     </footer>
     <script src="assets/js/less.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+<script>
+    $(document).ready(function () {
+            $('.chosAmtUl li ').click(function(e) {
+            $('.chosAmtUl li.active').removeClass('active');
+            var $parent = $(this);
+            $parent.addClass('active');
+            e.preventDefault();
+        });
+    });
+</script>
 
 </body>
 
