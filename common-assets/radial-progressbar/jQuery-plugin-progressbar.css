@@ -1,0 +1,109 @@
+.causesListSec .progress-bar {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin: 15px auto;
+  background: #fff;
+}
+
+.causesListSec .progress-bar:before {
+  content: attr(data-percent);
+  position: absolute;
+  background: #000;
+  width: 31px;
+  height: 20px;
+  line-height: 20px;
+  top: 60px;
+  border-radius: 4px;
+  left: -35px;
+  z-index: 99;
+  font-size: 12px;
+}
+.causesListSec .progress-bar:after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: -4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #000000;
+}
+
+.causesListSec .progress-bar.right-label:before {
+  right: -35px;
+  left: unset;
+  top: 43px;
+}
+.causesListSec .progress-bar.right-label:after {
+  transform: rotate(180deg);
+  right: -4px;
+  left: unset;
+  top: 48px;
+}
+
+.causesListSec .progress-bar div {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.causesListSec .progress-bar div.progress-bar-icon {
+  z-index: 99;
+  width: 64px;
+  height: 64px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.causesListSec .progress-bar div span {
+  /*
+  height: 175px;
+  width: 175px;
+  left: 12.5px;
+  top: 12.5px;
+ */
+  position: absolute;
+  font-size: 25px;
+  line-height: 138px;
+  height: 138px;
+  width: 138px;
+  left: 6.4px;
+  top: 6.4px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.causesListSec .progress-bar .background {
+  background-color: #b3cef6;
+}
+
+.causesListSec .progress-bar .rotate {
+  clip: rect(0 75px 150px 0);
+  background-color: #4b86db;
+}
+
+.causesListSec .progress-bar .left {
+  clip: rect(0 75px 150px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+
+.causesListSec .progress-bar .right {
+  clip: rect(0 75px 150px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
